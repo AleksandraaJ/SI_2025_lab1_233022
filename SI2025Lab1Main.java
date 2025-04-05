@@ -80,6 +80,7 @@ class TaskManager {
 
     // 4. Sort tasks by priority
     public void sortTasksByPriority() {
+        Collections.sort(tasks, Comparator.comparing(Task::getPriority));
         // TODO: Implement sorting by priority logic
     }
 
@@ -103,6 +104,14 @@ class TaskManager {
 
     // 8. Mark a task as completed by name
     public void markTaskCompleted(String name) {
+        for (Task task : tasks) {
+            if (task.getName().equals(name)) {
+                task.complete();
+                System.out.println("Task \"" + name + "\" marked as completed.");
+                return;
+            }
+        }
+        System.out.println("Task \"" + name + "\" not found.");
         // TODO: Implement completion logic
     }
 
