@@ -1,0 +1,18 @@
+git fetch origin                    # Презема гранки од GitHub
+git checkout 1-remove-a-task-by-name # Префрла на гранка за првиот issue
+git add SI2025Lab1Main.java         # Додава конкретна датотека за commit
+git add .                           # Ги додава сите изменети датотеки
+git commit -m "Implemented removeTask method to remove tasks by name" # Креира commit за првиот issue
+git push -u origin 1-remove-a-task-by-name # Испраќа промени на GitHub
+git checkout 4-sort-tasks-by-priority # Се префрла на гранка за вториот issue
+git add .                           # Ги додава сите изменети датотеки
+git commit -m "Implement 'Sort tasks by priority' feature" # Креира commit за вториот issue
+git push -u origin 4-sort-tasks-by-priority # Испраќа промени на GitHub
+git checkout 8-mark-a-task-as-completed-by-name # Се префрла на гранка за третиот issue
+git add .                           # Ги додава сите изменети датотеки
+git commit -m "Implement 'Mark a task as completed by name' feature" # Креира commit за третиот issue
+git push -u origin 8-mark-a-task-as-completed-by-name # Испраќа промени на GitHub
+git checkout master                 # се префрла на главната гранка master
+git pull origin master              # Ажурира master од GitHub
+git merge 1-remove-a-task-by-name   # Спојува гранка во master локално
+git push origin master              # Синхронизира master со GitHub

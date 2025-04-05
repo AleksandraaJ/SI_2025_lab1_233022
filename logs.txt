@@ -1,0 +1,11 @@
+*   84c241e Merge branch 'master' of github.com:AleksandraaJ/SI_2025_lab1_233022
+|\  
+| *   b62e25d Merge pull request #12 from AleksandraaJ/8-mark-a-task-as-completed-by-name
+| |\  
+| | * 637aa5b Implement 'Mark a task as completed by name' feature
+| | * 4f83f80 Implement 'Sort tasks by priority' feature
+| |/  
+* / e0b79a3 Implemented removeTask method to remove tasks by name
+|/  
+* 6fb6e17 Add starter code
+* 74f37f4 Initial commit
