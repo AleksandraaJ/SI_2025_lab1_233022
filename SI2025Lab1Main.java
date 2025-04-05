@@ -65,6 +65,14 @@ class TaskManager {
     // 1. Remove a task by name
     public void removeTask(String name) {
         // TODO: Implement removal logic
+        for (Task task : tasks) {
+            if (task.getName().equals(name)) {  // If task name matches the given name
+                tasks.remove(task);  // Remove the task from the list
+                System.out.println("Task '" + name + "' has been removed.");
+                return;  // Exit after removing the task
+            }
+        }
+        System.out.println("Task '" + name + "' not found.");
     }
 
     // 2. Find all completed tasks
@@ -121,6 +129,18 @@ public class SI2025Lab1Main {
 
         // MISSING: Calls to the new methods that will be implemented
 
+        // Print tasks before removal
+        System.out.println("Tasks before removal:");
         manager.printTasks();
+
+        // Remove a task by name
+        manager.removeTask("Buy groceries");  // Remove task with name "Buy groceries"
+
+        // Print tasks after removal
+        System.out.println("\nTasks after removal:");
+        manager.printTasks();
+
+        // Try removing a task that doesn't exist
+        manager.removeTask("Do laundry");
     }
 }
